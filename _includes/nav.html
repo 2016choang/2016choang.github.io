@@ -23,11 +23,5 @@
                 <a class="link" href="{{ site.url }}/blog">Blog</a>
             </li>
         {% endif %}
-
-        {% if (site.resume == true and page.title != "Home") %}
-            <li class="item">
-                <a class="link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">Resume</a>
-            </li>
-        {% endif %}
     </ul>
 </nav>
