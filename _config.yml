@@ -1,6 +1,6 @@
 # main text of home
 name: Chris Hoang
-bio: avid computer science student
+bio: Computer Science student at the University of Michigan
 
 # twitter summary info
 # description: A blog about technology and stuff related
@@ -56,7 +56,7 @@ email: choang@umich.com
 authors:
     chris:
         name: Chris Hoang
-        bio: Computer Science student at the university of Michigan
+        bio: Computer Science student at the University of Michigan
         external-image: false
         picture: assets/images/profile.jpg
 
