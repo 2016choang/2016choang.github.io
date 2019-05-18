@@ -12,7 +12,7 @@ This summer, I am working at [Citadel](https://www.citadel.com/) as a software e
 
 <p>Outside of school/work, my hobbies include music, tennis, science fiction and strategy games.</p>
 
-<a class="link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}" target="_blank">Resume</a>
+<a class="link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">Resume</a>
 
 <!-- <a class="link" href="{{ site.url }}/timeline">Timeline</a> -->
 

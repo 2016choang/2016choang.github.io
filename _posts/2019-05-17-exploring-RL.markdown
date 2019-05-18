@@ -15,8 +15,10 @@ externalLink: false
 published: true
 ---
 
-This summer, I will spend some time to learn more about reinforcement learning (RL) and gain hands-on experience in preparation for my work with [Honglak Lee's research group](http://web.eecs.umich.edu/~honglak/hl_research.html) in Fall 2019.
+## Objective
 
-I will be guided by OpenAI's [Spinning Up in Deep RL](https://spinningup.openai.com/en/latest/) tutorial. Follow my journey into this exicting field below!
+This summer, I will invest time on reinforcement learning (RL) in preparation for my time with [Honglak Lee's research group](http://web.eecs.umich.edu/~honglak/hl_research.html) in Fall 2019. I want to establish a solid understanding of the core principles, gain hands-on experience in working with popular algorithms and explore new research to find areas of RL which I find especially exciting.
+
+I will be guided by OpenAI's [Spinning Up in Deep RL](https://spinningup.openai.com/en/latest/) tutorial. Follow my journey below!
 
 ---
