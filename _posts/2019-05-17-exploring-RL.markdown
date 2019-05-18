@@ -8,7 +8,7 @@ tag:
 headerImage: true
 projects: true
 <!-- hidden: true # don't count this post in blog pagination -->
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+description: "My exploration of RL in summer 2019."
 category: project
 author: chris
 externalLink: false
