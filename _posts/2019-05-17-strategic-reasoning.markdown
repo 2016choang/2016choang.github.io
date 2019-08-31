@@ -26,4 +26,4 @@ I have been conducting research with the [Strategic Reasoning Group](https://str
 
 ## Recent Work
 
-Our research paper **"Learning-Based Trading Strategies in the Face of Market Manipulation"** has been accepted to [MAL - ICML 2019](https://sites.google.com/view/mal-icml-2019). We introduce two adaptions of the [heuristic belief learning](https://www.sciencedirect.com/science/article/pii/S0165188906001370) trading strategy and evaluate the performance of each strategy. Through empirical game-theoretic analysis, we are able to demonstrate each strategy's resilience to spoofing in equilibrium settings.
+Our research paper [**"Learning-Based Trading Strategies in the Face of Market Manipulation"**](/assets/files/MAL-ICML-paper.pdf) has been accepted to [MAL - ICML 2019](https://sites.google.com/view/mal-icml-2019). We introduce two adaptions of the [heuristic belief learning](https://www.sciencedirect.com/science/article/pii/S0165188906001370) trading strategy and evaluate the performance of each strategy. Through empirical game-theoretic analysis, we are able to demonstrate each strategy's resilience to spoofing in equilibrium settings.
