@@ -240,3 +240,13 @@ nav a:hover {
     font-size: 1.2em;
   }
 }
+
+/* Base Styles for the Blog Post Content */
+.post-content {
+  font-size: 16px; /* Base font size for blog posts */
+  line-height: 1.25;
+}
+
+.post-content p, strong {
+  font-size: 1em;
+}
