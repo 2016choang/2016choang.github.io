@@ -37,15 +37,14 @@
                   Towards this end, I am exploring the following directions:
                 </p>
                 <ol style="margin:1em;padding:0">
-                  <li>World models from videos and experience</li>
+                  <li>World models from videos and interaction</li>
                   <li>Self-supervised learning for in-the-wild visual data</li>
                 </ol>
                 <p>
                   I've also been thinking about:
                 </p>
                 <ol style="margin:1em;padding:0">
-                  <li>Open-endedness, exploration, self-improvement</li>
-                  <li>Multimodal post-training and test-time scaling</li>
+                  <li>Exploration, data curation</li>
                 </ol>
                 <p>
                   Previously, I worked on the systematic equities research team at <a href="https://voleon.com/">The Voleon Group</a> as a machine learning engineer.
@@ -124,6 +123,46 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="djepa_stop()" onmouseover="djepa_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <img src='images/djepa.png' width="160">
+                  <div class="two" id='djepa_image'>
+                    <img src='images/djepa.png' width="160"></div>
+                </div>
+                <script type="text/javascript">
+                  function djepa_start() {
+                    document.getElementById('djepa_image').style.opacity = "1";
+                  }
+
+                  function djepa_stop() {
+                    document.getElementById('djepa_image').style.opacity = "0";
+                  }
+                  djepa_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://openreview.net/pdf?id=91kfdrEafN">
+                  <papertitle>Discrete JEPA: Learning Discrete Token Representations without Reconstruction</papertitle>
+                </a>
+                <br>
+							  <a href="https://cun-bjy.github.io">Junyeob Baek</a>, 
+							  <a href="https://confeitohs.notion.site">Hosung Lee</a>, 
+							  <strong>Chris Hoang</strong>,
+                <a href="https://mengyeren.com">Mengye Ren</a>
+							  <a href="https://mlml.kaist.ac.kr/sungjinahn">Sungjin Ahn</a>, 
+                <br>
+							  <em>ICML Tokenization Workshop</em>, 2025
+                <br>
+                <a href="https://openreview.net/pdf?id=91kfdrEafN">paper</a>
+                <p></p>
+                <p>
+                  We introduce Discrete-JEPA, which learns discrete semantic tokens for improved symbolic reasoning and long-horizon planning.
+                </p>
+              </td>
+            </tr>
+
 
             <tr onmouseout="poodle_stop()" onmouseover="poodle_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -299,7 +338,7 @@
               <td style="padding:0px">
                 <br>
                 <p style="text-align:left;font-size:small;">
-                  Last updated April 30, 2025
+                  Last updated June 14, 2025
                 </p>
               </td>
               <td style="padding:0px">
