@@ -12,6 +12,8 @@
 </head>
 
 <body>
+  <canvas id="backgroundCanvas"></canvas>
+  
   <!-- Navigation Bar -->
   <nav>
     <div>
@@ -28,7 +30,8 @@
       <tr>
         <td style="padding:20px;">
           <h1>Predictions</h1>
-
+          
+          <div class="prediction-list">
             <div class="prediction-card">
               <h3>Household robot</h3>
               <p>A fully-automated general-purpose household robot will be available for consumer purchase and have noteworthy adoption (e.g. 10K units sold) no earlier than 2028. </p>
@@ -36,18 +39,8 @@
                 <div class="progress-bar"></div>
               </div>
               <p class="date set">Set: June 14, 2025</p>
-              <p class="deadline">Deadline: January 1, 2028</p>
+              <p class="deadline">Deadline: December 31, 2028</p>
             </div>
-
-            <!-- <div class="prediction-card">
-              <h3>Bitcoin Price</h3>
-              <p>Bitcoin will reach $100k by 2024</p>
-              <div class="result wrong">
-                <span>❌ Wrong</span>
-                <p class="explanation">Bitcoin reached $73k but didn't hit the target price.</p>
-              </div>
-              <p class="deadline">Deadline: December 31, 2024</p>
-            </div> -->
           </div>
         </td>
       </tr>
@@ -55,6 +48,28 @@
   </div>
 
   <style>
+    #backgroundCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .content table {
+      background-color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      background-color: white;
+      position: relative;
+      z-index: 1;
+    }
+
     .prediction-list {
       display: flex;
       flex-direction: column;
@@ -134,5 +149,7 @@
     updateProgressBars();
     setInterval(updateProgressBars, 86400000); // Update daily
   </script>
+
+  <script src="background-animation.js"></script>
 </body>
 </html>

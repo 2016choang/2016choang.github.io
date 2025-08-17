@@ -12,6 +12,8 @@
 </head>
 
 <body>
+  <canvas id="backgroundCanvas"></canvas>
+  
   <!-- Navigation Bar -->
   <nav>
     <div>
@@ -44,21 +46,21 @@
                   <name>Chris Hoang</name>
                 </p>
                 <p>Hello! I am a PhD student in the <a href="https://wp.nyu.edu/cilvr/">CILVR</a> lab at <a href="https://cs.nyu.edu/">NYU Courant</a> advised by <a href="https://mengyeren.com/">Mengye Ren</a> and supported by the NDSEG fellowship.
-                  My areas of interest are machine learning and computer vision.
                   My research goal is to advance the visual perception and reasoning capabilities of AI agents to enable them to robustly operate in the complex real world.
                   Towards this end, I am exploring the following directions:
                 </p>
                 <ol style="margin:1em;padding:0">
-                  <li>World models from videos and interaction</li>
-                  <li>Self-supervised learning for in-the-wild visual data</li>
+                  <li>World models from videos and experience</li>
+                  <li>Verifiers and test-time planning</li>
                 </ol>
                 <p>
                   I've also been thinking about:
                 </p>
                 <ol style="margin:1em;padding:0">
                   <li>Exploration, data curation</li>
-                  <li>Test-time planning and optimization</li>
+                  <li>Task horizons, hierarchy, memory</li>
                 </ol>
+                <!-- <li>Self-supervised learning for in-the-wild visual data</li> -->
                 <p>
                   Previously, I worked on the systematic equities research team at <a href="https://voleon.com/">The Voleon Group</a> as a machine learning engineer.
                   I completed my bachelor's and master's in computer science at the <a href="https://cse.engin.umich.edu/">University of Michigan</a>.
@@ -355,6 +357,32 @@
       </tr>
     </table>
   </div>
+
+  <style>
+    #backgroundCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .content table {
+      background-color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      background-color: white;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+
+  <script src="background-animation.js"></script>
 </body>
 
 </html>
