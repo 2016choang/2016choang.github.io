@@ -37,13 +37,13 @@ nav div {
 }
 
 nav a {
-  margin-right: 20px !important;
+  margin-right: 1.25rem !important;
   text-decoration: none !important;
   color: #333 !important;
   font-weight: 500 !important;
-  font-size: 20px !important;
+  font-size: 1.25rem !important;
   transition: color 0.2s ease !important;
-  padding: 14px 16px !important;
+  padding: 0.875rem 1rem !important;
   display: inline-block !important;
 }
 
@@ -67,4 +67,21 @@ nav a:hover {
   background-color: white;
   position: relative;
   z-index: 1;
+}
+
+/* Mobile navigation adjustments */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.5rem 0;
+  }
+  
+  nav div {
+    padding: 0 0.625rem;
+  }
+  
+  nav a {
+    font-size: 1rem !important;
+    margin-right: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
 }
