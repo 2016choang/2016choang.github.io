@@ -572,9 +572,14 @@
        .content-column {
          width: 100%;
          max-width: 100%;
-         padding: 15px;
+         padding: 10px;
          box-sizing: border-box;
          overflow-x: hidden;
+       }
+
+       /* Reduce padding for content inside content-column on mobile */
+       .content-column > p {
+         padding-left: 10px !important;
        }
 
 
@@ -598,6 +603,26 @@
          overflow-wrap: break-word;
        }
 
+       /* News section mobile layout */
+       .news-table {
+         margin: 0 !important;
+       }
+
+       .news-table tr {
+         display: flex !important;
+         flex-direction: column !important;
+       }
+
+       .news-table td {
+         width: 100% !important;
+         padding: 5px 15px !important;
+         box-sizing: border-box;
+       }
+
+       .news-table td:first-child {
+         margin-bottom: 5px;
+       }
+
        /* Publications section mobile layout */
        .content-column table tr {
          display: flex;
@@ -614,7 +639,8 @@
        .content-column table tr td:last-child {
          order: 2; /* Text content second */
          width: 100% !important;
-         padding: 10px 20px !important;
+         padding: 10px 15px !important;
+         box-sizing: border-box;
        }
 
        /* Adjust image/video container size for mobile */
