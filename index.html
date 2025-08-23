@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="nav-styles.css">
   <script src="https://kit.fontawesome.com/59e626bb20.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,38 +26,54 @@
   <!-- End Navigation Bar -->
 
   <div class="content">
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile-picture.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/profile-picture-circle.png" class="hoverZoomLink"></a>
-                <p class="email">ch3451 [at] nyu.edu</p>
-                <div class="social-links">
-                  <a href="files/choang_cv.pdf" class="social-link">CV</a>
-                  <a href="https://www.linkedin.com/in/2016choang" aria-label="LinkedIn"><i class="fa-brands fa-linkedin social-icon"></i></a>
-                  <a href="https://twitter.com/choang333" aria-label="Twitter"><i class="fa-brands fa-twitter social-icon"></i></a>
-                  <a href="https://scholar.google.com/citations?user=5vKuUwsAAAAJ&hl=en&oi=sra" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar social-icon"></i></a>
-                  <a href="https://github.com/2016choang" aria-label="GitHub"><i class="fa-brands fa-github social-icon"></i></a>
-                </div>
-              </td>
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p style="text-align:center">
-                  <name>Chris Hoang</name>
-                </p>
+    <div class="main-container">
+            <div class="profile-column">
+        <a href="images/profile-picture.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/profile-picture-circle.png" class="hoverZoomLink"></a>
+        <div class="profile-info">
+          <p style="text-align:left">
+            <name>Chris Hoang</name>
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link-row" onclick="copyEmail(event)">
+              <i class="fa-solid fa-envelope social-icon"></i>
+              <span>ch3451 [at] nyu.edu</span>
+            </a>
+            <a href="files/choang_cv.pdf" class="social-link-row" target="_blank">
+              <i class="fa-solid fa-file-pdf social-icon"></i>
+              <span>CV</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=5vKuUwsAAAAJ&hl=en&oi=sra" class="social-link-row" target="_blank">
+              <i class="fa-brands fa-google-scholar social-icon"></i>
+              <span>Google Scholar</span>
+            </a>
+            <a href="https://twitter.com/choang333" class="social-link-row" target="_blank">
+              <i class="fa-brands fa-twitter social-icon"></i>
+              <span>@choang333</span>
+            </a>
+            <a href="https://github.com/2016choang" class="social-link-row" target="_blank">
+              <i class="fa-brands fa-github social-icon"></i>
+              <span>github.com/2016choang</span>
+            </a>
+            <a href="https://www.linkedin.com/in/2016choang" class="social-link-row" target="_blank">
+              <i class="fa-brands fa-linkedin social-icon"></i>
+              <span>linkedin.com/in/2016choang</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="content-column">
                 <p>Hello! I am a PhD student in the <a href="https://wp.nyu.edu/cilvr/">CILVR</a> lab at <a href="https://cs.nyu.edu/">NYU Courant</a> advised by <a href="https://mengyeren.com/">Mengye Ren</a> and supported by the NDSEG fellowship.
                   My research goal is to advance the visual perception and reasoning capabilities of AI agents to enable them to robustly operate in the complex real world.
                   Towards this end, I am exploring the following directions:
                 </p>
-                <ol style="margin:1em;padding:0">
+                <ol class="intro-list">
                   <li>World models from videos and experience</li>
                   <li>Verifiers and test-time planning</li>
                 </ol>
                 <p>
                   I've also been thinking about:
                 </p>
-                <ol style="margin:1em;padding:0">
+                <ol class="intro-list">
                   <li>Exploration, data curation</li>
                   <li>Task horizons, hierarchy, memory</li>
                 </ol>
@@ -65,11 +82,8 @@
                   Previously, I worked on the systematic equities research team at <a href="https://voleon.com/">The Voleon Group</a> as a machine learning engineer.
                   I completed my bachelor's and master's in computer science at the <a href="https://cse.engin.umich.edu/">University of Michigan</a>.
                   There, I was fortunate to work with <a href="https://web.eecs.umich.edu/~honglak">Honglak Lee</a> on reinforcement learning and representation learning, and <a href="https://strategicreasoning.org/michael-p-wellman">Michael P. Wellman</a> on multi-agent systems.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        </p>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
               <td style="padding-left:20px;width:100%;vertical-align:middle">
                 <heading>News</heading>
@@ -337,52 +351,301 @@
             </tr>
 				  </tbody></table>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:left;font-size:small;">
-                  Last updated June 14, 2025
-                </p>
-              </td>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Inspired by Jon Barron's <a href="https://jonbarron.info/">website template</a>
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
+
+      </div>
+    </div>
   </div>
 
-  <style>
-    #backgroundCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.3;
-    }
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-left">Last updated August 22, 2025</p>
+      <p class="footer-right">Inspired by Jon Barron's <a href="https://jonbarron.info/">website template</a></p>
+    </div>
+  </footer>
 
-    .content table {
-      background-color: white;
-      position: relative;
-      z-index: 1;
-    }
+     <style>
+     /* Increase base font sizes */
+     body, p, td, th, tr, a {
+       font-size: 14px !important;
+     }
 
-    nav {
-      background-color: white;
-      position: relative;
-      z-index: 1;
-    }
-  </style>
+     /* Email text in profile */
+     .email {
+       font-size: 14px !important;
+     }
+
+     /* Headings */
+     heading {
+       font-size: 24px !important;
+     }
+
+     /* Footer text */
+     p[style*="font-size:small"] {
+       font-size: 14px !important;
+     }
+
+     /* Footer styles */
+     .site-footer {
+       width: 100%;
+       background-color: white;
+       position: relative;
+       z-index: 1;
+       margin-top: 40px;
+       padding: 20px 0;
+       border-top: 1px solid #eee;
+     }
+
+     .footer-content {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       max-width: 1000px;
+       margin: 0 auto;
+       padding: 0 20px;
+     }
+
+     .footer-left,
+     .footer-right {
+       font-size: 14px;
+       margin: 0;
+     }
+
+     /* Main container using flexbox */
+     .main-container {
+       display: flex;
+       width: 100%;
+       max-width: 1000px;
+       margin: 0 auto;
+       background-color: white;
+       position: relative;
+       z-index: 1;
+       align-items: flex-start;
+       gap: 10px;
+       padding-top: 0;
+     }
+
+     /* Sticky profile section */
+     .profile-column {
+       position: sticky;
+       top: 60px;
+       width: 30%;
+       max-width: 300px;
+       padding: 5px 20px;
+       align-self: flex-start;
+       background-color: white;
+       z-index: 2;
+       max-height: calc(100vh - 70px);
+       overflow-y: auto;
+       box-sizing: border-box;
+     }
+
+     /* Desktop: profile-info should not affect layout */
+     .profile-info {
+       display: contents;
+     }
+
+     /* Content column */
+     .content-column {
+       width: 70%;
+       padding: 5px 20px;
+       vertical-align: middle;
+     }
+
+     /* Align introduction text with News section */
+     .content-column > p {
+       padding-left: 20px;
+     }
+
+     /* Fix list alignment with proper bullet positioning */
+     .intro-list {
+       margin-left: 40px;
+       margin-top: 1em;
+       margin-bottom: 1em;
+       margin-right: 0;
+       padding: 0;
+     }
+
+     /* Social links styling */
+     .social-links {
+       display: flex;
+       flex-direction: column;
+       gap: 6px;
+       margin-top: 15px;
+       align-items: flex-start;
+     }
+
+     .social-link-row {
+       display: flex;
+       align-items: center;
+       gap: 8px;
+       padding: 4px 0;
+       text-decoration: none;
+       color: #1772d0;
+       transition: color 0.2s ease;
+     }
+
+     .social-link-row:hover {
+       color: #f09228;
+       text-decoration: none;
+     }
+
+     .social-link-row:focus {
+       color: #1772d0;
+       outline: none;
+     }
+
+     .social-link-row:focus:hover {
+       color: #f09228;
+     }
+
+     .social-link-row .social-icon {
+       width: 14px;
+       font-size: 14px;
+       color: inherit;
+       display: inline-block;
+       text-align: center;
+       min-width: 14px;
+     }
+
+     .social-link-row span {
+       font-size: 14px;
+       font-weight: 400;
+     }
+
+
+
+     /* Responsive design for mobile */
+     @media (max-width: 768px) {
+       .main-container {
+         flex-direction: column;
+         gap: 10px;
+       }
+       
+       .profile-column {
+         position: sticky;
+         top: 80px;
+         width: 100vw;
+         max-width: none;
+         margin: 0 -15px 20px -15px;
+         padding: 15px;
+         display: flex;
+         flex-direction: row-reverse;
+         align-items: flex-start;
+         gap: 15px;
+         background-color: white;
+         z-index: 2;
+         box-sizing: border-box;
+       }
+
+       .profile-column img {
+         width: 240px;
+         height: 240px;
+         flex-shrink: 0;
+       }
+
+       .profile-info {
+         display: flex;
+         flex-direction: column;
+         flex-grow: 1;
+       }
+
+       .profile-info p {
+         margin: 0 0 8px 0;
+         padding-left: 20px !important;
+       }
+
+       .profile-info .social-links {
+         margin-top: 8px;
+         padding-left: 20px;
+       }
+       
+       .content-column {
+         width: 100%;
+         padding: 15px;
+       }
+
+       nav div {
+         padding: 0 15px;
+       }
+
+       .footer-content {
+         flex-direction: column;
+         text-align: center;
+         gap: 10px;
+       }
+     }
+   </style>
 
   <script src="background-animation.js"></script>
+  
+  <script>
+    function copyEmail(event) {
+      event.preventDefault();
+      const email = 'ch3451@nyu.edu';
+      
+      // Remove focus from the clicked element
+      event.target.blur();
+      
+      // Modern clipboard API
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+          showCopyFeedback();
+        }).catch(() => {
+          fallbackCopyTextToClipboard(email);
+        });
+      } else {
+        // Fallback for older browsers
+        fallbackCopyTextToClipboard(email);
+      }
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.top = "0";
+      textArea.style.left = "0";
+      textArea.style.position = "fixed";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      
+      try {
+        document.execCommand('copy');
+        showCopyFeedback();
+      } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+      }
+      
+      document.body.removeChild(textArea);
+    }
+
+    function showCopyFeedback() {
+      // Create temporary feedback element
+      const feedback = document.createElement('div');
+      feedback.textContent = 'Email copied to clipboard!';
+      feedback.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-size: 14px;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      `;
+      
+      document.body.appendChild(feedback);
+      
+      // Remove after 2 seconds
+      setTimeout(() => {
+        document.body.removeChild(feedback);
+      }, 2000);
+    }
+  </script>
 </body>
 
 </html>
+

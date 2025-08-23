@@ -1,0 +1,70 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Set Montserrat as default font */
+body, html, p, h1, h2, h3, h4, h5, h6, div, span, a, td, th, tr, strong, em, i:not([class*="fa"]), 
+nav, nav a, nav div {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Preserve Font Awesome icons with higher specificity */
+.fa, .fas, .far, .fal, .fab, .fa-solid, .fa-regular, .fa-light, .fa-brands,
+[class^="fa-"], [class*=" fa-"], i[class*="fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-weight: 900;
+}
+
+.fa-brands, .fab, i[class*="fa-brands"] {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400;
+}
+
+/* Shared Navigation Styles */
+nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav div {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav a {
+  margin-right: 20px !important;
+  text-decoration: none !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  transition: color 0.2s ease !important;
+  padding: 14px 16px !important;
+  display: inline-block !important;
+}
+
+nav a:hover {
+  color: #1772d0 !important;
+  background-color: transparent !important;
+}
+
+/* Background canvas styles */
+#backgroundCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.content table {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
