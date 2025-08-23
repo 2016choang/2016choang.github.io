@@ -539,8 +539,7 @@
        }
        
        .profile-column {
-         position: sticky;
-         top: 60px;
+         position: static;
          width: 100%;
          max-width: 100%;
          margin: 0;
@@ -597,6 +596,66 @@
        td, th {
          word-wrap: break-word;
          overflow-wrap: break-word;
+       }
+
+       /* Publications section mobile layout */
+       .content-column table tr {
+         display: flex;
+         flex-direction: column;
+       }
+
+       .content-column table tr td:first-child {
+         order: 1; /* Image/video first */
+         width: 100% !important;
+         text-align: center;
+         padding: 10px 20px !important;
+       }
+
+       .content-column table tr td:last-child {
+         order: 2; /* Text content second */
+         width: 100% !important;
+         padding: 10px 20px !important;
+       }
+
+       /* Adjust image/video container size for mobile */
+       .content-column .one {
+         width: 200px !important;
+         height: 200px !important;
+         margin: 0 auto;
+         position: relative;
+       }
+
+       /* Fix hover effect positioning on mobile */
+       .content-column .one img {
+         max-width: 200px !important;
+         max-height: 200px !important;
+         width: auto !important;
+         height: auto !important;
+       }
+
+       .content-column .two {
+         position: absolute !important;
+         top: 0 !important;
+         left: 0 !important;
+         width: 200px !important;
+         height: 200px !important;
+         display: flex !important;
+         align-items: center !important;
+         justify-content: center !important;
+       }
+
+       .content-column .two img {
+         max-width: 200px !important;
+         max-height: 200px !important;
+         width: auto !important;
+         height: auto !important;
+       }
+
+       .content-column .two video {
+         max-width: 200px !important;
+         max-height: 200px !important;
+         width: auto !important;
+         height: auto !important;
        }
      }
    </style>
