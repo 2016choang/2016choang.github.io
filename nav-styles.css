@@ -21,13 +21,13 @@ nav, nav a, nav div {
 
 /* Shared Navigation Styles */
 nav {
-  background-color: white;
+  background-color: #faf8f5;
   position: sticky;
   top: 0;
   z-index: 10;
   padding: 15px 0;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #e8e4df;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 nav div {
@@ -64,7 +64,7 @@ nav a:hover {
 }
 
 .content table {
-  background-color: white;
+  background-color: #faf8f5;
   position: relative;
   z-index: 1;
 }

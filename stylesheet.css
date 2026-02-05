@@ -74,6 +74,10 @@ a:hover {
   text-decoration: none;
 }
 
+body {
+  background-color: #faf8f5;
+}
+
 body,
 td,
 th,
@@ -164,11 +168,11 @@ span.highlight {
 /* Navigation Bar Styles */
 nav {
   width: 100%;
-  background-color: white;
+  background-color: #faf8f5;
   position: fixed;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #ccc; /* Line under the nav bar */
+  border-bottom: 1px solid #e8e4df;
 }
 
 nav div {
