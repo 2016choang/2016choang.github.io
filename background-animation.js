@@ -7,19 +7,21 @@ class Dot {
     this.speed = 0.125 + Math.random() * 0.075;
     this.vx = Math.cos(this.heading) * this.speed;
     this.vy = Math.sin(this.heading) * this.speed;
+    this.angle = this.heading;
+    this.alpha = 1;
     this.connections = new Set();
     this.id = Math.random();
   }
 
-  update() {
+  update(dt) {
     // Solo drift; flock motion is applied at the swarm level
-    this.heading += (Math.random() - 0.5) * 0.04;
+    this.heading += (Math.random() - 0.5) * 0.04 * Math.sqrt(dt);
 
     this.vx = Math.cos(this.heading) * this.speed;
     this.vy = Math.sin(this.heading) * this.speed;
 
-    this.x += this.vx;
-    this.y += this.vy;
+    this.x += this.vx * dt;
+    this.y += this.vy * dt;
 
     if (this.x < 0) { this.x = 0; this.heading = Math.PI - this.heading; }
     else if (this.x > window.innerWidth) { this.x = window.innerWidth; this.heading = Math.PI - this.heading; }
@@ -27,10 +29,19 @@ class Dot {
     else if (this.y > window.innerHeight) { this.y = window.innerHeight; this.heading = -this.heading; }
   }
 
+  // Ease the drawn nose toward the travel direction so joins and wall bounces turn instead of snap
+  turn(dt) {
+    let diff = Math.atan2(this.vy, this.vx) - this.angle;
+    diff = Math.atan2(Math.sin(diff), Math.cos(diff));
+    this.angle += diff * (1 - Math.pow(0.88, dt));
+  }
+
   draw(ctx) {
+    if (this.alpha <= 0) return;
     ctx.save();
+    ctx.globalAlpha = this.alpha;
     ctx.translate(this.x, this.y);
-    ctx.rotate(Math.atan2(this.vy, this.vx) + Math.PI / 2);
+    ctx.rotate(this.angle + Math.PI / 2);
 
     ctx.strokeStyle = '#1F1E1D';
     ctx.lineWidth = 1.5;
@@ -70,8 +81,15 @@ class BackgroundAnimation {
     // Configuration variables
     this.connectionDistance = 100;
     this.maxConnections = 3;
-    this.frameCount = 0;
-    this.updateInterval = 3;
+    this.lastTime = null;
+    this.tickTime = 0;
+    this.updateInterval = 3;  // in 60fps frames
+
+    // Ships fade out smoothly near these opaque elements instead of being clipped by their edges
+    this.fadeSelector = 'nav, .main-container, .content table, .prediction-card';
+    this.fadeDistance = 40;
+    this.shipRadius = 10;
+    this.fadeElements = [];
     
     // Dot population limits
     this.minDots = 20;
@@ -87,14 +105,38 @@ class BackgroundAnimation {
     
     this.resize();
     this.initDots();
-    this.animate();
+    this.animate(performance.now());
     
     window.addEventListener('resize', () => this.resize());
   }
 
   resize() {
-    this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
+    // Render at device resolution so ships stay crisp on high-DPI screens
+    const dpr = window.devicePixelRatio || 1;
+    this.canvas.width = Math.round(window.innerWidth * dpr);
+    this.canvas.height = Math.round(window.innerHeight * dpr);
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    // Skip elements nested inside another fade element; the outer box already covers them
+    const all = Array.from(document.querySelectorAll(this.fadeSelector));
+    this.fadeElements = all.filter((el) => !all.some((other) => other !== el && other.contains(el)));
+  }
+
+  // 0 when a ship touches an opaque element, easing up to 1 at fadeDistance away
+  updateAlphas() {
+    const rects = this.fadeElements
+      .map((el) => el.getBoundingClientRect())
+      .filter((r) => r.width > 0 && r.height > 0);
+    this.dots.forEach((dot) => {
+      let minDist = Infinity;
+      rects.forEach((r) => {
+        const dx = Math.max(r.left - dot.x, 0, dot.x - r.right);
+        const dy = Math.max(r.top - dot.y, 0, dot.y - r.bottom);
+        minDist = Math.min(minDist, Math.hypot(dx, dy));
+      });
+      const t = Math.max(0, Math.min(1, (minDist - this.shipRadius) / this.fadeDistance));
+      dot.alpha = t * t * (3 - 2 * t);
+    });
   }
 
   initDots() {
@@ -108,10 +150,12 @@ class BackgroundAnimation {
     }
   }
 
-  animate() {
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    
-    this.frameCount++;
+  animate(now) {
+    this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+    // Frame-rate independent motion, in units of 60fps frames; clamp so a backgrounded tab doesn't jump
+    const dt = this.lastTime === null ? 1 : Math.min(4, Math.max(0, (now - this.lastTime) / (1000 / 60)));
+    this.lastTime = now;
     
     // Solo ships drift on their own. Flocks (connected components) move as a
     // single unit, sharing a common heading + speed so relative spacing holds.
@@ -120,7 +164,7 @@ class BackgroundAnimation {
       if (visited.has(dot)) return;
       if (dot.connections.size === 0) {
         visited.add(dot);
-        dot.update();
+        dot.update(dt);
         return;
       }
 
@@ -146,7 +190,7 @@ class BackgroundAnimation {
         sumHY += Math.sin(s.heading);
         sumSpeed += s.speed;
       });
-      let flockHeading = Math.atan2(sumHY, sumHX) + (Math.random() - 0.5) * 0.04;
+      let flockHeading = Math.atan2(sumHY, sumHX) + (Math.random() - 0.5) * 0.04 * Math.sqrt(dt);
       const flockSpeed = sumSpeed / flock.length;
       let vx = Math.cos(flockHeading) * flockSpeed;
       let vy = Math.sin(flockHeading) * flockSpeed;
@@ -154,8 +198,8 @@ class BackgroundAnimation {
       // Reflect at the flock level if any ship would cross a wall
       let flipX = false, flipY = false;
       flock.forEach((s) => {
-        const nx = s.x + vx;
-        const ny = s.y + vy;
+        const nx = s.x + vx * dt;
+        const ny = s.y + vy * dt;
         if (nx < 0 || nx > window.innerWidth) flipX = true;
         if (ny < 0 || ny > window.innerHeight) flipY = true;
       });
@@ -171,13 +215,15 @@ class BackgroundAnimation {
         s.speed = flockSpeed;
         s.vx = vx;
         s.vy = vy;
-        s.x = Math.max(0, Math.min(window.innerWidth, s.x + vx));
-        s.y = Math.max(0, Math.min(window.innerHeight, s.y + vy));
+        s.x = Math.max(0, Math.min(window.innerWidth, s.x + vx * dt));
+        s.y = Math.max(0, Math.min(window.innerHeight, s.y + vy * dt));
       });
     });
 
     // Spawn/remove/connection bookkeeping runs less often
-    if (this.frameCount % this.updateInterval === 0) {
+    this.tickTime += dt;
+    if (this.tickTime >= this.updateInterval) {
+      this.tickTime %= this.updateInterval;
       // Random dot spawning
       if (Math.random() < this.dotSpawnRate && this.dots.length < this.maxDots) {
         this.dots.push(new Dot(
@@ -204,11 +250,13 @@ class BackgroundAnimation {
     }
     
     // Always draw (for smooth visual)
+    this.updateAlphas();
     this.dots.forEach(dot => {
+      dot.turn(dt);
       dot.draw(this.ctx);
     });
 
-    requestAnimationFrame(() => this.animate());
+    requestAnimationFrame((t) => this.animate(t));
   }
 
   updateConnections() {
