@@ -68,7 +68,7 @@
                 </p>
                 <p>
                   My goal is to build AI systems that can solve complex tasks in the real world to amplify human productivity and well-being.
-                  I have worked on multimodal LLMs [<a href="https://arxiv.org/abs/2611.17334">1</a>], visual pretraining [<a href="https://arxiv.org/abs/2510.05558">2</a>, <a href="https://arxiv.org/abs/2408.11208">3</a>, <a href="https://arxiv.org/abs/2506.14373">4</a>], and reinforcement learning [<a href="https://arxiv.org/abs/2111.09858">5</a>].
+                  I have worked on multimodal LLMs [<a href="https://arxiv.org/abs/2611.17334">1</a>], visual pretraining [<a href="https://arxiv.org/abs/2510.05558">2</a>, <a href="https://arxiv.org/abs/2408.11208">3</a>, <a href="https://arxiv.org/abs/2506.14373">4</a>], world models [<a href="https://alphaxiv.org/abs/2611.jepa-latent-maps-content-geometry">5</a>, <a href="https://openreview.net/forum?id=Pz9sdChr10">6</a>], and reinforcement learning [<a href="https://arxiv.org/abs/2111.09858">7</a>].
                   I am currently interested in exploration and long-horizon training.
                 </p>
                 <p>
@@ -85,6 +85,16 @@
             </tr>
           </tbody></table>
           <table class="news-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding-left:20px;width:25%;vertical-align:middle">
+                <p style="text-align:left">
+                  <strong>November 2026</strong>
+                </p>
+              </td>
+              <td style="padding-left:20px;width:75%;vertical-align:middle">
+                <a href="https://unbundling.github.io/">Unbundling Multimodal Vision Encoding</a> is released.
+              </td>
+            </tr>
             <tr style="padding:0px">
               <td style="padding-left:20px;width:25%;vertical-align:middle">
                 <p style="text-align:left">
@@ -266,6 +276,33 @@
                 <p></p>
                 <p>
                   We disentangle the three design choices that vision encoders bundle in multimodal LLMs and find that what matters is dedicated vision capacity, which can be trained jointly from scratch and placed inside the early layers of the backbone.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <a href="https://agenticlearning.ai/content-geometry-tradeoff/"><video width="160" muted autoplay loop playsinline poster="images/content-geometry-tradeoff.png" aria-label="The Content–Geometry Tradeoff in World Models: Slow SVReg latent map during maze navigation">
+                  <source src="images/content-geometry-tradeoff.mp4" type="video/mp4">
+                </video></a>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://agenticlearning.ai/content-geometry-tradeoff/">
+                  <papertitle>The Content–Geometry Tradeoff in World Models: When JEPA Learns Latent Maps</papertitle>
+                </a>
+                <br>
+                <a href="https://mengyeren.com">Mengye Ren</a>,
+                <a href="https://yingwangg.github.io/">Ying Wang*</a>,
+                <strong>Chris Hoang*</strong>,
+                <a href="https://yilunkuang.github.io/">Yilun Kuang</a>,
+                <a href="http://yann.lecun.com">Yann LeCun</a>
+                <br>
+                <a href="https://agenticlearning.ai/content-geometry-tradeoff/">project page</a>
+                /
+                <a href="https://alphaxiv.org/abs/2611.jepa-latent-maps-content-geometry">alphaXiv</a>
+                <p></p>
+                <p>
+                  Sliced variance regularization learns smooth latent maps for planning, and slow channels with a gated residual predictor keep the task-relevant content.
                 </p>
               </td>
             </tr>
