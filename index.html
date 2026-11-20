@@ -7,9 +7,10 @@
   <meta name="author" content="Chris Hoang">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" type="text/css" href="nav-styles.css">
-  <script src="https://kit.fontawesome.com/59e626bb20.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
   <!-- Navigation Bar -->
   <nav>
     <div>
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="blog.html">Blog</a>
       <a href="predictions.html">Predictions</a>
     </div>
@@ -35,27 +36,27 @@
           </p>
           <div class="social-links">
             <a href="#" class="social-link-row" onclick="copyEmail(event)">
-              <i class="fa-solid fa-envelope social-icon"></i>
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13Zm2.3.5 6.7 5.02L18.7 6H5.3ZM19 8.1l-6.4 4.8a1 1 0 0 1-1.2 0L5 8.1V18.5c0 .28.22.5.5.5h13a.5.5 0 0 0 .5-.5V8.1Z"/></svg>
               <span>chrishoang [at] nyu.edu</span>
             </a>
             <a href="files/choang_cv.pdf" class="social-link-row" target="_blank">
-              <i class="fa-solid fa-file-pdf social-icon"></i>
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h8.5L20 7.5V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7.5 1.8V8h4.2L13.5 3.8ZM8 12h8v1.6H8V12Zm0 3.6h8v1.6H8v-1.6Zm0-7.2h3.5V10H8V8.4Z"/></svg>
               <span>CV</span>
             </a>
             <a href="https://scholar.google.com/citations?user=5vKuUwsAAAAJ&hl=en&oi=sra" class="social-link-row" target="_blank">
-              <i class="fa-brands fa-google-scholar social-icon"></i>
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9l4 2.18v5.32c0 1.93 3.13 3.5 7 3.5s7-1.57 7-3.5v-5.32L21 10.1V16h2V9L12 3Zm0 10.67L5.24 10 12 6.33 18.76 10 12 13.67Z"/></svg>
               <span>Google Scholar</span>
             </a>
             <a href="https://twitter.com/choang333" class="social-link-row" target="_blank">
-              <i class="fa-brands fa-twitter social-icon"></i>
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.05 4.8a4.28 4.28 0 0 0 1.32 5.71 4.24 4.24 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.97A8.59 8.59 0 0 1 2 19.07a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 22.46 6Z"/></svg>
               <span>@choang333</span>
             </a>
             <a href="https://github.com/2016choang" class="social-link-row" target="_blank">
-              <i class="fa-brands fa-github social-icon"></i>
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
               <span>github.com/2016choang</span>
             </a>
             <a href="https://www.linkedin.com/in/2016choang" class="social-link-row" target="_blank">
-              <i class="fa-brands fa-linkedin social-icon"></i>
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18.34v-8H5.67v8h2.67ZM7 9.21a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1Zm11.34 9.13v-4.4c0-2.35-1.25-3.44-2.93-3.44-1.35 0-1.95.74-2.29 1.26v-1.08h-2.67c.04.76 0 7.66 0 7.66h2.67v-4.28c0-.23.02-.46.08-.62.18-.46.6-.93 1.3-.93.92 0 1.29.7 1.29 1.73v4.1h2.55Z"/></svg>
               <span>linkedin.com/in/2016choang</span>
             </a>
           </div>
@@ -236,79 +237,79 @@
               }
             })();
           </script>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:20px;"><tbody>
             <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
+              <td style="padding:12px 20px 6px 20px;width:100%;vertical-align:middle">
                 <heading>Publications</heading>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="pub-table" style="width:100%;border:0px;margin-right:auto;margin-left:auto;"><tbody>
 
             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                 <!-- The project page's teaser animation (the three choices, answered in turn), recorded frame by frame -->
-                <a href="https://unbundling.github.io/"><video width="160" muted autoplay loop playsinline poster="images/unbundling.png" aria-label="Unbundling Multimodal Vision Encoding: the three design choices, answered in turn">
+                <a class="pub-media-frame" href="https://unbundling.github.io/"><video width="160" muted autoplay loop playsinline poster="images/unbundling.png" aria-label="Unbundling Multimodal Vision Encoding: the three design choices, answered in turn">
                   <source src="images/unbundling.mp4" type="video/mp4">
                 </video></a>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://unbundling.github.io/">
                   <papertitle>Unbundling Multimodal Vision Encoding</papertitle>
                 </a>
-                <br>
-                <strong>Chris Hoang*</strong>,
-                <a href="https://ellisbrown.github.io/">Ellis Brown*</a>,
-                <a href="https://jasonqsy.github.io/">Shengyi Qian</a>,
-                <a href="https://ai.meta.com/people/1630642931666147/shang-wen-daniel-li/">Shang-Wen Li</a>,
-                <a href="https://scholar.google.com/citations?user=SnQnQicAAAAJ">Mike Lewis</a>,
-                <a href="https://scholar.google.com/citations?user=0VG3sQIAAAAJ">Marjan Ghazvininejad</a>,
-                <a href="https://www.cs.washington.edu/people/faculty/lsz">Luke Zettlemoyer</a>,
-                <a href="https://lucasb.eyer.be/">Lucas Beyer</a>,
-                <a href="https://mengyeren.com">Mengye Ren&dagger;</a>,
-                <a href="https://thoth.inrialpes.fr/~verbeek/">Jakob Verbeek&dagger;</a>,
-                <a href="https://www.sainingxie.com/">Saining Xie&dagger;</a>,
-                <a href="https://howardhsu.github.io/">Hu Xu&dagger;</a>
-                <br>
-                <a href="https://unbundling.github.io/">project page</a>
-                /
-                <a href="https://arxiv.org/abs/2611.17334">arXiv</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <strong>Chris Hoang*</strong>,
+                  <a href="https://ellisbrown.github.io/">Ellis Brown*</a>,
+                  <a href="https://jasonqsy.github.io/">Shengyi Qian</a>,
+                  <a href="https://ai.meta.com/people/1630642931666147/shang-wen-daniel-li/">Shang-Wen Li</a>,
+                  <a href="https://scholar.google.com/citations?user=SnQnQicAAAAJ">Mike Lewis</a>,
+                  <a href="https://scholar.google.com/citations?user=0VG3sQIAAAAJ">Marjan Ghazvininejad</a>,
+                  <a href="https://www.cs.washington.edu/people/faculty/lsz">Luke Zettlemoyer</a>,
+                  <a href="https://lucasb.eyer.be/">Lucas Beyer</a>,
+                  <a href="https://mengyeren.com">Mengye Ren&dagger;</a>,
+                  <a href="https://thoth.inrialpes.fr/~verbeek/">Jakob Verbeek&dagger;</a>,
+                  <a href="https://www.sainingxie.com/">Saining Xie&dagger;</a>,
+                  <a href="https://howardhsu.github.io/">Hu Xu&dagger;</a>
+                </div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://unbundling.github.io/">project page</a>
+                  <a class="pub-link" href="https://arxiv.org/abs/2611.17334">arXiv</a>
+                </div>
+                <p class="pub-summary">
                   We disentangle the three design choices that vision encoders bundle in multimodal LLMs and find that what matters is dedicated vision capacity, which can be trained jointly from scratch and placed inside the early layers of the backbone.
                 </p>
               </td>
             </tr>
 
             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <a href="https://agenticlearning.ai/content-geometry-tradeoff/"><video width="160" muted autoplay loop playsinline poster="images/content-geometry-tradeoff.png" aria-label="The Content–Geometry Tradeoff in World Models: Slow SVReg latent map during maze navigation">
+              <td style="width:25%;vertical-align:middle">
+                <a class="pub-media-frame" href="https://agenticlearning.ai/content-geometry-tradeoff/"><video width="160" muted autoplay loop playsinline poster="images/content-geometry-tradeoff.png" aria-label="The Content–Geometry Tradeoff in World Models: Slow SVReg latent map during maze navigation">
                   <source src="images/content-geometry-tradeoff.mp4" type="video/mp4">
                 </video></a>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://agenticlearning.ai/content-geometry-tradeoff/">
                   <papertitle>The Content–Geometry Tradeoff in World Models: When JEPA Learns Latent Maps</papertitle>
                 </a>
-                <br>
-                <a href="https://mengyeren.com">Mengye Ren</a>,
-                <a href="https://yingwangg.github.io/">Ying Wang*</a>,
-                <strong>Chris Hoang*</strong>,
-                <a href="https://yilunkuang.github.io/">Yilun Kuang</a>,
-                <a href="http://yann.lecun.com">Yann LeCun</a>
-                <br>
-                <a href="https://agenticlearning.ai/content-geometry-tradeoff/">project page</a>
-                /
-                <a href="https://alphaxiv.org/abs/2611.jepa-latent-maps-content-geometry">alphaXiv</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <a href="https://mengyeren.com">Mengye Ren</a>,
+                  <a href="https://yingwangg.github.io/">Ying Wang*</a>,
+                  <strong>Chris Hoang*</strong>,
+                  <a href="https://yilunkuang.github.io/">Yilun Kuang</a>,
+                  <a href="http://yann.lecun.com">Yann LeCun</a>
+                </div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://agenticlearning.ai/content-geometry-tradeoff/">project page</a>
+                  <a class="pub-link" href="https://alphaxiv.org/abs/2611.jepa-latent-maps-content-geometry">alphaXiv</a>
+                </div>
+                <p class="pub-summary">
                   Sliced variance regularization learns smooth latent maps for planning, and slow channels with a gated residual predictor keep the task-relevant content.
                 </p>
               </td>
             </tr>
 
             <tr onmouseout="midway_stop()" onmouseover="midway_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                 <div class="one">
                   <img src='images/midway.png' width="160">
                   <div class="two" id='midway_image'>
@@ -325,21 +326,20 @@
                   midway_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://agenticlearning.ai/midway-network/">
                   <papertitle>Midway Network: Learning Representations for Recognition and Motion from Latent Dynamics</papertitle>
                 </a>
-                <br>
-							  <strong>Chris Hoang</strong>,
-                <a href="https://mengyeren.com">Mengye Ren</a>
-                <br>
-							  <em>ICLR 2026</em>
-                <br>
-                <a href="https://agenticlearning.ai/midway-network/">project page</a>
-                /
-                <a href="https://arxiv.org/abs/2510.05558">arXiv</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <strong>Chris Hoang</strong>,
+                  <a href="https://mengyeren.com">Mengye Ren</a>
+                </div>
+                <div class="pub-venue">ICLR 2026</div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://agenticlearning.ai/midway-network/">project page</a>
+                  <a class="pub-link" href="https://arxiv.org/abs/2510.05558">arXiv</a>
+                </div>
+                <p class="pub-summary">
                   Midway Network is a new self-supervised learning architecture that is the first to learn visual representations for both object recognition and motion prediction solely from natural videos by leveraging latent dynamics.
                 </p>
               </td>
@@ -347,10 +347,10 @@
 
             <!-- TODO: add CANON paper link -->
             <tr onmouseout="canon_stop()" onmouseover="canon_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                 <div class="one">
                   <img src='images/canon.jpg' width=100%>
-                  <div class="two" id='canon_image'><video  width=100% height=100% muted autoplay loop>
+                  <div class="two" id='canon_image'><video width=100% height=100% muted autoplay loop playsinline>
                   <source src="images/canon.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video></div>
@@ -366,26 +366,23 @@
                   canon_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="">
-                  <papertitle>Canonical Observation Pretraining for Visuomotor Control</papertitle>
-                </a>
-                <br>
-                <a href="https://xavhl.github.io/">Yuen-Hei Yeung</a>,
-							  <strong>Chris Hoang</strong>,
-                <a href="https://www.zifanzhao.com/">Zifan Zhao</a>,
-                <a href="https://mengyeren.com">Mengye Ren</a>
-                <br>
-							  <em>CVPR 2026 ActiVis Workshop</em>
-                <p></p>
-                <p>
+              <td style="width:75%;vertical-align:middle">
+                <papertitle>Canonical Observation Pretraining for Visuomotor Control</papertitle>
+                <div class="pub-authors">
+                  <a href="https://xavhl.github.io/">Yuen-Hei Yeung</a>,
+                  <strong>Chris Hoang</strong>,
+                  <a href="https://www.zifanzhao.com/">Zifan Zhao</a>,
+                  <a href="https://mengyeren.com">Mengye Ren</a>
+                </div>
+                <div class="pub-venue" style="margin-bottom:8px;">CVPR 2026 ActiVis Workshop</div>
+                <p class="pub-summary">
                   Our method Canonical pretrains visual representations by modeling camera viewpoint change as an SO(3) rotation in latent space, allowing visuomotor policies to generalize to unseen camera angles without calibration.
                 </p>
               </td>
             </tr>
 
-            <tr onmouseout="midway_stop()" onmouseover="midway_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+            <tr onmouseout="lamo_stop()" onmouseover="lamo_start()">
+              <td style="width:25%;vertical-align:middle">
                 <div class="one">
                   <img src='images/lamo.png' width="160">
                   <div class="two" id='lamo_image'>
@@ -402,27 +399,27 @@
                   lamo_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://openreview.net/forum?id=Pz9sdChr10">
                   <papertitle>LaMo: A Latent Motion World Model for Long-Horizon Prediction</papertitle>
                 </a>
-                <br>
-                <a href="https://scholar.google.com/citations?user=dnrJtSUAAAAJ&hl=en">Azwar Abdulsalam</a>,
-							  <strong>Chris Hoang</strong>,
-                <a href="https://mengyeren.com">Mengye Ren</a>
-                <br>
-							  <em>ICLR 2026 2nd Workshop on World Models</em>
-                <br>
-                <a href="https://openreview.net/forum?id=Pz9sdChr10">project page</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <a href="https://scholar.google.com/citations?user=dnrJtSUAAAAJ&hl=en">Azwar Abdulsalam</a>,
+                  <strong>Chris Hoang</strong>,
+                  <a href="https://mengyeren.com">Mengye Ren</a>
+                </div>
+                <div class="pub-venue">ICLR 2026 2nd Workshop on World Models</div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://openreview.net/forum?id=Pz9sdChr10">project page</a>
+                </div>
+                <p class="pub-summary">
                   LaMo is a structured latent dynamics model that enables long-horizon prediction by autoregressively predicting latent motion tokens used to advance a visual scene's latent state over time.
                 </p>
               </td>
             </tr>
 
             <tr onmouseout="djepa_stop()" onmouseover="djepa_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                 <div class="one">
                   <img src='images/djepa.png' width="160">
                   <div class="two" id='djepa_image'>
@@ -439,22 +436,22 @@
                   djepa_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://arxiv.org/abs/2506.14373">
                   <papertitle>Discrete JEPA: Learning Discrete Token Representations without Reconstruction</papertitle>
                 </a>
-                <br>
-							  <a href="https://cun-bjy.github.io">Junyeob Baek</a>,
-							  <a href="https://confeitohs.notion.site">Hosung Lee</a>,
-							  <strong>Chris Hoang</strong>,
-                <a href="https://mengyeren.com">Mengye Ren</a>,
-							  <a href="https://mlml.kaist.ac.kr/sungjinahn">Sungjin Ahn</a>
-                <br>
-							  <em>ICML Tokenization Workshop 2025</em>
-                <br>
-                <a href="https://arxiv.org/abs/2506.14373">arXiv</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <a href="https://cun-bjy.github.io">Junyeob Baek</a>,
+                  <a href="https://confeitohs.notion.site">Hosung Lee</a>,
+                  <strong>Chris Hoang</strong>,
+                  <a href="https://mengyeren.com">Mengye Ren</a>,
+                  <a href="https://mlml.kaist.ac.kr/sungjinahn">Sungjin Ahn</a>
+                </div>
+                <div class="pub-venue">ICML Tokenization Workshop 2025</div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://arxiv.org/abs/2506.14373">arXiv</a>
+                </div>
+                <p class="pub-summary">
                   We introduce Discrete-JEPA, which learns discrete semantic tokens for improved symbolic reasoning and long-horizon planning.
                 </p>
               </td>
@@ -462,10 +459,10 @@
 
 
             <tr onmouseout="poodle_stop()" onmouseover="poodle_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                   <div class="one">
                   <img src='images/poodle.jpg' width=100%>
-                  <div class="two" id='poodle_image'><video  width=100% height=100% muted autoplay loop>
+                  <div class="two" id='poodle_image'><video width=100% height=100% muted autoplay loop playsinline>
                   <source src="images/poodle.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video></div>
@@ -481,34 +478,33 @@
                   poodle_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://poodle-ssl.github.io/">
                   <papertitle>PooDLe: Pooled and dense self-supervised learning from naturalistic videos</papertitle>
                 </a>
-                <br>
-                <a href="https://www.alexn.wang">Alex N. Wang*</a>,
-                <strong>Chris Hoang*</strong>,
-                <a href="https://www.cs.toronto.edu/~yuwe">Yuwen Xiong</a>,
-                <a href="http://yann.lecun.com">Yann LeCun</a>,
-                <a href="https://mengyeren.com">Mengye Ren</a>
-                <br>
-							  <em>ICLR 2025</em>
-                <br>
-                <a href="https://poodle-ssl.github.io">project page</a>
-                /
-                <a href="https://arxiv.org/abs/2408.11208">arXiv</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <a href="https://www.alexn.wang">Alex N. Wang*</a>,
+                  <strong>Chris Hoang*</strong>,
+                  <a href="https://www.cs.toronto.edu/~yuwe">Yuwen Xiong</a>,
+                  <a href="http://yann.lecun.com">Yann LeCun</a>,
+                  <a href="https://mengyeren.com">Mengye Ren</a>
+                </div>
+                <div class="pub-venue">ICLR 2025</div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://poodle-ssl.github.io">project page</a>
+                  <a class="pub-link" href="https://arxiv.org/abs/2408.11208">arXiv</a>
+                </div>
+                <p class="pub-summary">
                   We propose a self-supervised learning framework that combines pooled and dense objectives to learn representations with spatial and semantic understanding from naturalistic videos.
                 </p>
               </td>
             </tr>
 
             <tr onmouseout="sfl_stop()" onmouseover="sfl_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                 <div class="one">
                   <img src='images/sfl.jpg' width="160">
-                  <div class="two" id='sfl_image'><video  width=100% height=100% muted autoplay loop>
+                  <div class="two" id='sfl_image'><video width=100% height=100% muted autoplay loop playsinline>
                   <source src="images/sfl.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video></div>
@@ -524,28 +520,24 @@
                   sfl_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://2016choang.github.io/sfl">
                   <papertitle>Successor Feature Landmarks for Long-Horizon Goal-Conditioned Reinforcement Learning</papertitle>
                 </a>
-                <br>
-                <strong>Chris Hoang</strong>,
-                <a href="https://sites.google.com/view/sungryull">Sungryull Sohn</a>,
-                <a href="https://wook.kr">Jongwook Choi</a>,
-                <a href="https://wcarvalho.github.io">Wilka Carvalho</a>,
-                <a href="https://web.eecs.umich.edu/~honglak">Honglak Lee</a>
-                <br>
-							  <em>NeurIPS 2021</em>
-                <br>
-                <em>NeurIPS Workshop on Deep Reinforcement Learning 2020</em>
-                <br>
-                <a href="https://2016choang.github.io/sfl">project page</a>
-                /
-                <a href="https://arxiv.org/abs/2111.09858">arXiv</a>
-                /
-                <a href="https://youtu.be/WWfXAdghkxU">video</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <strong>Chris Hoang</strong>,
+                  <a href="https://sites.google.com/view/sungryull">Sungryull Sohn</a>,
+                  <a href="https://wook.kr">Jongwook Choi</a>,
+                  <a href="https://wcarvalho.github.io">Wilka Carvalho</a>,
+                  <a href="https://web.eecs.umich.edu/~honglak">Honglak Lee</a>
+                </div>
+                <div class="pub-venue">NeurIPS 2021 · NeurIPS Workshop on Deep Reinforcement Learning 2020</div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://2016choang.github.io/sfl">project page</a>
+                  <a class="pub-link" href="https://arxiv.org/abs/2111.09858">arXiv</a>
+                  <a class="pub-link" href="https://youtu.be/WWfXAdghkxU">video</a>
+                </div>
+                <p class="pub-summary">
                   We leverage successor features to formulate a graph-based planning framework and goal-conditioned policy, enabling long-horizon goal-reaching in visual environments.
                 </p>
               </td>
@@ -553,7 +545,7 @@
 
 
             <tr onmouseout="spoofing_stop()" onmouseover="spoofing_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                 <div class="one">
                   <img src='images/spoofing.jpg' width="160">
                   <div class="two" id='spoofing_image'>
@@ -570,28 +562,28 @@
                   spoofing_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://www.mdpi.com/2073-4336/12/2/46/htm">
                   <papertitle>Spoofing the Limit Order Book: A Strategic Agent-Based Analysis</papertitle>
                 </a>
-                <br>
-							  <a href="https://xintongemilywang.github.io/">Xintong Wang</a>,
-							  <strong>Chris Hoang</strong>,
-							  <a href="https://vorobeychik.com/">Yevgeniy Vorobeychik</a>,
-							  <a href="https://strategicreasoning.org/michael-p-wellman">Michael P. Wellman</a>,
-                <br>
-							  <em>Games 2021</em>
-                <br>
-                <a href="https://www.mdpi.com/2073-4336/12/2/46">paper</a>
-                <p></p>
-                <p>
+                <div class="pub-authors">
+                  <a href="https://xintongemilywang.github.io/">Xintong Wang</a>,
+                  <strong>Chris Hoang</strong>,
+                  <a href="https://vorobeychik.com/">Yevgeniy Vorobeychik</a>,
+                  <a href="https://strategicreasoning.org/michael-p-wellman">Michael P. Wellman</a>
+                </div>
+                <div class="pub-venue">Games 2021</div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://www.mdpi.com/2073-4336/12/2/46">paper</a>
+                </div>
+                <p class="pub-summary">
                   We use an agent-based model and empirical game-theoretic analysis to study price manipulation in financial markets and propose mitigation mechanisms.
                 </p>
               </td>
             </tr>
 
             <tr onmouseout="trading_stop()" onmouseover="trading_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
+              <td style="width:25%;vertical-align:middle">
                 <div class="one">
                   <img src='images/learning-trading.jpg' width="160">
                   <div class="two" id='trading_image'>
@@ -608,23 +600,21 @@
                   trading_stop()
                 </script>
               </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
+              <td style="width:75%;vertical-align:middle">
                 <a href="https://dl.acm.org/doi/abs/10.1145/3383455.3422568">
                   <papertitle>Learning-Based Trading Strategies in the Face of Market Manipulation</papertitle>
                 </a>
-                <br>
-							  <a href="https://xintongemilywang.github.io/">Xintong Wang</a>,
-							  <strong>Chris Hoang</strong>,
-							  <a href="https://strategicreasoning.org/michael-p-wellman">Michael P. Wemman</a>,
-                <br>
-							  <em>ICAIF 2020</em>
-                <br>
-							  <em>ICML Workshop on AI in Finance 2019</em>
-                <br>
-                <a href="https://dl.acm.org/doi/abs/10.1145/3383455.3422568">paper</a>
-                <p></p>
-                <p>
-                We design learning-based trading strategies that have improved robustness to market manipulation and evaluate them with agent-based simulation.
+                <div class="pub-authors">
+                  <a href="https://xintongemilywang.github.io/">Xintong Wang</a>,
+                  <strong>Chris Hoang</strong>,
+                  <a href="https://strategicreasoning.org/michael-p-wellman">Michael P. Wemman</a>
+                </div>
+                <div class="pub-venue">ICAIF 2020 · ICML Workshop on AI in Finance 2019</div>
+                <div class="pub-meta">
+                  <a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3383455.3422568">paper</a>
+                </div>
+                <p class="pub-summary">
+                  We design learning-based trading strategies that have improved robustness to market manipulation and evaluate them with agent-based simulation.
                 </p>
               </td>
             </tr>
@@ -638,41 +628,21 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
-      <p class="footer-left">Last updated October 17, 2026</p>
+      <p class="footer-left mono-date">Last updated October 17, 2026</p>
       <p class="footer-right">Inspired by Jon Barron's <a href="https://jonbarron.info/">website template</a></p>
     </div>
   </footer>
 
      <style>
-     /* Increase base font sizes */
-     body, p, td, th, tr, a {
-       font-size: 14px !important;
-     }
-
-     /* Email text in profile */
-     .email {
-       font-size: 14px !important;
-     }
-
-     /* Headings */
-     heading {
-       font-size: 24px !important;
-     }
-
-     /* Footer text */
-     p[style*="font-size:small"] {
-       font-size: 14px !important;
-     }
-
      /* Footer styles */
      .site-footer {
        width: 100%;
-       background-color: #faf8f5;
+       background-color: var(--bg);
        position: relative;
        z-index: 1;
-       margin-top: 40px;
+       margin-top: 44px;
        padding: 20px 0;
-       border-top: 1px solid #e8e4df;
+       border-top: 1px solid var(--border);
      }
 
      .footer-content {
@@ -681,12 +651,13 @@
        align-items: center;
        max-width: 1000px;
        margin: 0 auto;
-       padding: 0 20px;
+       padding: 0 24px;
      }
 
      .footer-left,
      .footer-right {
-       font-size: 14px;
+       font-size: 13px;
+       color: var(--ink-muted);
        margin: 0;
      }
 
@@ -696,26 +667,31 @@
        width: 100%;
        max-width: 1000px;
        margin: 0 auto;
-       background-color: #faf8f5;
+       background-color: var(--bg);
        position: relative;
        z-index: 1;
        align-items: flex-start;
-       gap: 10px;
+       gap: 16px;
        padding-top: 0;
      }
 
      /* Sticky profile section */
      .profile-column {
        position: sticky;
-       top: 60px;
-       width: clamp(250px, 30%, 350px);
+       top: 68px;
+       width: clamp(240px, 28%, 310px);
        padding: 0.3125rem 1.25rem;
        align-self: flex-start;
-       background-color: #faf8f5;
+       background-color: var(--bg);
        z-index: 2;
-       max-height: calc(100vh - 70px);
+       max-height: calc(100vh - 80px);
        overflow-y: auto;
        box-sizing: border-box;
+     }
+
+     .profile-column p {
+       margin-top: 14px;
+       margin-bottom: 10px;
      }
 
      /* Desktop: profile-info should not affect layout */
@@ -749,56 +725,62 @@
      .social-links {
        display: flex;
        flex-direction: column;
-       gap: 6px;
-       margin-top: 15px;
+       gap: 4px;
+       margin-top: 10px;
        align-items: flex-start;
      }
 
      .social-link-row {
        display: flex;
        align-items: center;
-       gap: 8px;
-       padding: 4px 0;
-       text-decoration: none;
-       color: #0265E0;
-       transition: color 0.2s ease;
+       gap: 9px;
+       padding: 4px 6px;
+       margin-left: -6px;
+       border-radius: 6px;
+       text-decoration: none !important;
+       color: var(--ink-muted);
+       transition: color 0.16s ease, background-color 0.16s ease;
      }
 
-     .social-link-row:hover {
-       color: #f09228;
-       text-decoration: none;
+     .social-link-row:hover,
+     .social-link-row:focus:hover {
+       color: var(--accent);
+       background-color: var(--accent-soft);
+       text-decoration: none !important;
      }
 
      .social-link-row:focus {
-       color: #0265E0;
+       color: var(--accent);
        outline: none;
      }
 
-     .social-link-row:focus:hover {
-       color: #f09228;
+     .social-link-row .social-icon {
+       width: 15px;
+       height: 15px;
+       color: var(--accent);
+       opacity: 0.85;
+       display: inline-block;
+       flex-shrink: 0;
      }
 
-     .social-link-row .social-icon {
-       width: clamp(12px, 1.2vw, 16px);
-       font-size: clamp(12px, 1.2vw, 16px);
-       color: inherit;
-       display: inline-block;
-       text-align: center;
-       min-width: clamp(12px, 1.2vw, 16px);
+     .social-link-row:hover .social-icon {
+       opacity: 1;
      }
 
      .social-link-row span {
-       font-size: clamp(12px, 1.4vw, 14px);
+       font-size: 13.5px;
        font-weight: 400;
      }
 
      /* Unified responsive profile image sizing */
      .profile-column img {
-       width: clamp(120px, 30vw, 240px);
-       height: clamp(120px, 30vw, 240px);
+       width: clamp(120px, 24vw, 220px);
+       height: clamp(120px, 24vw, 220px);
        border-radius: 50%;
        object-fit: cover;
        flex-shrink: 0;
+       border: 1px solid var(--border);
+       box-shadow: 0 2px 10px rgba(31, 30, 29, 0.05);
      }
 
 
@@ -821,31 +803,50 @@
          position: static;
          width: 100%;
          max-width: 100%;
+         max-height: none;
+         overflow: visible;
          margin: 0;
-         padding: 15px;
+         padding: 15px 20px;
          display: flex;
          flex-direction: row-reverse;
          align-items: flex-start;
-         gap: 15px;
-         background-color: #faf8f5;
+         justify-content: space-between;
+         gap: 14px;
+         background-color: var(--bg);
          z-index: 2;
          box-sizing: border-box;
+       }
+
+       .profile-column img {
+         width: 108px;
+         height: 108px;
        }
 
        .profile-info {
          display: flex;
          flex-direction: column;
-         flex-grow: 1;
+         flex: 1;
+         min-width: 0;
        }
 
        .profile-info p {
          margin: 0 0 8px 0;
-         padding-left: 20px !important;
+         padding-left: 0 !important;
        }
 
        .profile-info .social-links {
-         margin-top: 8px;
-         padding-left: 20px;
+         margin-top: 4px;
+         padding-left: 0;
+       }
+
+       .social-link-row {
+         margin-left: 0;
+         padding: 3px 0;
+       }
+
+       .pub-media-frame {
+         margin: 0 auto;
+         width: 200px;
        }
 
        .content-column {
@@ -1016,13 +1017,14 @@
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #4CAF50;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 4px;
-        font-size: 14px;
+        background: #1f1e1d;
+        color: #faf8f5;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-family: var(--font-mono);
+        font-size: 12.5px;
         z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 14px rgba(31, 30, 29, 0.18);
       `;
 
       document.body.appendChild(feedback);

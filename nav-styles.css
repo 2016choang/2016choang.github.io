@@ -1,13 +1,7 @@
-/* Import Montserrat font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+/* Editorial typography pairing: Newsreader (display/headings), Inter (body), IBM Plex Mono (dates/metadata) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
 
-/* Set Montserrat as default font */
-body, html, p, h1, h2, h3, h4, h5, h6, div, span, a, td, th, tr, strong, em, i:not([class*="fa"]), 
-nav, nav a, nav div {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-}
-
-/* Preserve Font Awesome icons with higher specificity */
+/* Preserve Font Awesome icons */
 .fa, .fas, .far, .fal, .fab, .fa-solid, .fa-regular, .fa-light, .fa-brands,
 [class^="fa-"], [class*=" fa-"], i[class*="fa-"] {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
@@ -19,40 +13,63 @@ nav, nav a, nav div {
   font-weight: 400;
 }
 
-/* Shared Navigation Styles */
+/* Shared Navigation Bar */
 nav {
-  background-color: #faf8f5;
+  width: 100%;
+  background-color: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
-  z-index: 10;
-  padding: 15px 0;
-  border-bottom: 1px solid #e8e4df;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 100;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border, #e6e0d6);
 }
 
 nav div {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 nav a {
-  margin-right: 1.25rem !important;
+  position: relative;
   text-decoration: none !important;
-  color: #333 !important;
-  font-weight: 500 !important;
-  font-size: 1.25rem !important;
-  transition: color 0.2s ease !important;
-  padding: 0.875rem 1rem !important;
-  display: inline-block !important;
+  color: var(--ink-muted, #5c5852);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 14.5px;
+  letter-spacing: -0.005em;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: color 0.16s ease, background-color 0.16s ease;
 }
 
 nav a:hover {
-  color: #0265E0 !important;
-  background-color: transparent !important;
+  color: var(--ink, #1f1e1d);
+  background-color: var(--surface, #f2eee7);
 }
 
-/* Background canvas styles */
+nav a[aria-current="page"] {
+  color: var(--ink, #1f1e1d);
+  font-weight: 600;
+}
+
+nav a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 1.5px;
+  background-color: var(--accent, #1e4fa3);
+  border-radius: 1px;
+}
+
+/* Background canvas */
 #backgroundCanvas {
   position: fixed;
   top: 0;
@@ -60,11 +77,12 @@ nav a:hover {
   width: 100%;
   height: 100%;
   z-index: -1;
+  pointer-events: none;
   opacity: 1;
 }
 
 .content table {
-  background-color: #faf8f5;
+  background-color: var(--bg, #faf8f5);
   position: relative;
   z-index: 1;
 }
@@ -72,16 +90,16 @@ nav a:hover {
 /* Mobile navigation adjustments */
 @media (max-width: 768px) {
   nav {
-    padding: 0.5rem 0;
+    padding: 4px 0;
   }
-  
+
   nav div {
-    padding: 0 0.625rem;
+    padding: 0 12px;
+    gap: 4px;
   }
-  
+
   nav a {
-    font-size: 1rem !important;
-    margin-right: 0.75rem !important;
-    padding: 0.5rem 0.75rem !important;
+    font-size: 14px;
+    padding: 8px 10px;
   }
 }
